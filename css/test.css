@@ -1,0 +1,168 @@
+
+.test-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .test-progress-bar {
+    height: 6px;
+    background: var(--border);
+    border-radius: 3px;
+    margin-bottom: 32px;
+    overflow: hidden;
+  }
+  
+  .test-progress-fill {
+    height: 100%;
+    background: var(--accent);
+    transition: width 0.3s ease;
+  }
+  
+  .question-counter {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+  }
+  
+  .question-text {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 32px;
+    color: var(--text);
+  }
+  @media (max-width: 768px) { .question-text { font-size: 18px; } }
+  
+  .answers-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .answer-option {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    border: 2px solid var(--border);
+    border-radius: var(--r-md);
+    background: var(--surface);
+    cursor: pointer;
+    transition: all var(--t);
+    text-align: left;
+    width: 100%;
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--text);
+  }
+  
+  .answer-option:hover {
+    border-color: var(--accent);
+    background: var(--accent-light);
+  }
+  
+  .answer-option.selected {
+    border-color: var(--accent);
+    background: var(--accent-light);
+  }
+  
+  .answer-bubble {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    transition: all var(--t);
+  }
+  
+  .answer-option.selected .answer-bubble {
+    background: var(--accent);
+    color: #ffffff;
+  }
+  
+  .nav-btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .timer {
+    font-size: 16px;
+    font-weight: 700;
+    background: var(--bg-secondary);
+    padding: 8px 20px;
+    border-radius: var(--r-pill);
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+  
+  .timer.urgent {
+    color: var(--red);
+    border-color: var(--red);
+    animation: pulse 1s infinite;
+  }
+  
+  .q-dots {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+    justify-content: center;
+  }
+  
+  .q-dot {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--t);
+  }
+  
+  .q-dot.answered {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #ffffff;
+  }
+  
+  .q-dot.current {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  
+  
+  .result-score-ring { width: 160px; height: 160px; margin: 0 auto 32px; position: relative; }
+  .result-score-ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+  .result-score-ring circle { fill: none; stroke-width: 12; stroke-linecap: round; }
+  .ring-bg { stroke: var(--border); }
+  .ring-fill { transition: stroke-dashoffset 0.8s ease-out; }
+  .ring-passed { stroke: var(--green); }
+  .ring-failed { stroke: var(--red); }
+  .score-text { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .score-num { font-family: var(--font-heading); font-size: 36px; font-weight: 800; }
+  .score-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); }
+  
+  .review-item { padding: 16px 0; border-bottom: 1px solid var(--border); }
+  .review-q { font-weight: 700; margin-bottom: 8px; color: var(--text); }
+  .review-answer { display: inline-block; padding: 4px 12px; border-radius: var(--r-pill); font-size: 13px; }
+  .review-correct { background: var(--green-light); color: var(--green); }
+  .review-wrong { background: var(--red-light); color: var(--red); }

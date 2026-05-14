@@ -1,0 +1,36 @@
+
+.lesson-content {
+    line-height: 1.8;
+    color: var(--text);
+    font-size: 16px;
+  }
+  
+  .lesson-content p { margin-bottom: 24px; }
+  .lesson-content h3 { font-family: var(--font-heading); font-size: 26px; color: var(--text); margin: 40px 0 20px 0; }
+  .lesson-content h4 { font-family: var(--font-heading); font-size: 20px; color: var(--text); margin: 32px 0 16px 0; }
+  .lesson-content ul, .lesson-content ol { margin-bottom: 24px; padding-left: 28px; }
+  .lesson-content li { margin-bottom: 12px; }
+  .lesson-content strong { color: var(--text); font-weight: 700; }
+  
+  .quiz-box {
+    background: var(--accent-light);
+    border: 2px dashed var(--accent);
+    border-radius: var(--r-md);
+    padding: 24px;
+    margin: 32px 0;
+    transition: background var(--t);
+  }
+  
+  .quiz-box[data-answered="true"] {
+    border-color: var(--green);
+    background: var(--green-light);
+  }
+  
+  .quiz-box h4 {
+    color: var(--accent);
+    margin-bottom: 16px;
+    font-size: 18px;
+  }
+  
+  .quiz-box[data-answered="true"] h4 { color: var(--green); }
+  .quiz-feedback { margin-top: 16px; font-size: 15px; font-weight: 700; }

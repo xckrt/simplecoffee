@@ -1,0 +1,80 @@
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: var(--r-pill);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .badge-pass { background: var(--green-light); color: var(--green); }
+  .badge-fail { background: var(--red-light);   color: var(--red);   }
+  
+
+  .history-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+  }
+  
+  .history-table th {
+    text-align: left;
+    padding: 16px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    border-bottom: 2px solid var(--border);
+    background: var(--bg-secondary);
+  }
+  
+  .history-table td {
+    padding: 16px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    transition: background var(--t);
+    vertical-align: middle;
+  }
+  
+  .history-table tr:hover td { 
+    background: var(--bg-secondary); 
+  }
+  
+  /* Statistics Grid (Admin Dashboard) */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  
+  .stat-card {
+    background: var(--surface);
+    padding: 24px;
+    border-radius: var(--r-md);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    transition: transform var(--t), box-shadow var(--t);
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .stat-val {
+    font-family: var(--font-heading);
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--accent);
+  }
+  
+  .stat-key {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-top: 8px;
+  }

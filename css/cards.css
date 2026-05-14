@@ -1,0 +1,94 @@
+.card {
+    background: var(--surface);
+    border-radius: var(--r-md);
+    box-shadow: var(--shadow-sm);
+    padding: 32px;
+    transition: transform var(--t), box-shadow var(--t), background var(--t-slow);
+    border: 1px solid var(--border);
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+  .home-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+  }
+  .home-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-md);
+    padding: 28px 24px;
+    cursor: pointer;
+    transition: transform var(--t), box-shadow var(--t), border-color var(--t);
+    position: relative;
+    overflow: hidden;
+  }
+  .home-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--t);
+  }
+  .home-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--accent); }
+  .home-card:hover::before { transform: scaleX(1); }
+  .home-card-icon { font-size: 44px; margin-bottom: 16px; }
+  .home-card-title { font-family: var(--font-heading); font-size: 18px; font-weight: 700; margin-bottom: 6px; color: var(--text); }
+  .home-card-desc  { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+  
+  /* Progress widget on home */
+  .home-progress-widget {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-md);
+    padding: 28px;
+    margin-top: 32px;
+    box-shadow: var(--shadow-sm);
+  }
+  .home-progress-title { font-family: var(--font-heading); font-size: 16px; font-weight: 700; margin-bottom: 20px; }
+  .progress-bar-wrap { margin-bottom: 16px; }
+  .progress-bar-label { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-secondary); margin-bottom: 6px; font-weight: 600; }
+  .progress-bar-track { height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+  .progress-bar-fill  { height: 100%; background: var(--accent); border-radius: 4px; transition: width .6s ease; }
+  .progress-bar-fill.green { background: var(--green); }
+  
+  /* ─── BUTTONS ─────────────────────────────────────────────────── */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    padding: 11px 26px;
+    border-radius: var(--r-pill);
+    border: none;
+    cursor: pointer;
+    transition: all var(--t);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .btn:disabled { opacity: .55; cursor: not-allowed; }
+  
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover:not(:disabled) { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(255,107,53,.35); }
+  
+  .btn-outline { background: transparent; color: var(--accent); border: 2px solid var(--accent); }
+  .btn-outline:hover:not(:disabled) { background: var(--accent); color: #fff; }
+  
+  .btn-ghost { background: transparent; color: var(--text-secondary); border: 1px solid var(--border-mid); }
+  .btn-ghost:hover:not(:disabled) { background: var(--bg-secondary); }
+  
+  .btn-danger { background: var(--red); color: #fff; }
+  .btn-danger:hover:not(:disabled) { background: #b52d3a; transform: translateY(-2px); }
+  
+  .btn-sm { font-size: 11px; padding: 7px 16px; letter-spacing: .5px; }
